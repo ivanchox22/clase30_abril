@@ -98,29 +98,105 @@ $J_{ref} ≈ 2(1×10⁻⁴) + \frac{12}{0.9×400} ≈ 3.33×10⁻² \text{Kg-m²
 
 ---
 
-## 3. Diseño de Sistemas de Transmisión (Continuación)
+## 3. Diseño de Sistemas de Transmisión (Ampliado)
 
-### 3.3 Criterios de Selección
-El documento enfatiza tres aspectos clave:
-1. **Relación de inercia (J_R)**: Mantener J_R ≤ 5 para equilibrio entre rendimiento y costo. Valores altos (>10) generan:
-   - Respuesta lenta a cambios de velocidad
-   - Sobrecalentamiento del motor
-2. **Margen de seguridad**: Añadir 20-30% al torque calculado para cubrir perturbaciones.
-3. **Pérdidas por fricción**: En sistemas multi-etapa (ej. engranaje + tornillo), multiplicar eficiencias (η_total = η₁·η₂).
+### 3.1 Proceso de Diseño Detallado
+El diseño óptimo de transmisiones mecánicas requiere un enfoque sistémico que considere tanto parámetros estáticos como dinámicos. Según el documento original, este proceso consta de 5 etapas críticas:
 
-Ejemplo práctico: Un sistema con η₁=95% (engranajes) y η₂=85% (tornillo) tiene η_total ≈ 80.75%.
+1. **Definición de Requerimientos**:
+   - Perfil de movimiento (velocidad, aceleración)
+   - Precisión posicional (backlash permitido)
+   - Ciclo de trabajo (continuo/intermitente)
+   - Condiciones ambientales (temperatura, contaminantes)
 
-### 3.4 Validación por Simulación
-El documento muestra ejemplos en Simscape Multibody para:
-- **Engranajes**: Análisis de vibraciones y backlash
-- **Tornillos guía**: Efecto del paso (p) en la velocidad lineal
-- **Poleas**: Tensión óptima de correas
+2. **Selección del Tipo de Transmisión**:
+   | Criterio          | Engranajes | Polea-Correa | Tornillo Guía | Piñón-Cremallera |
+   |-------------------|------------|--------------|---------------|------------------|
+   | Precisión         | Alta       | Media        | Muy Alta      | Alta             |
+   | Distancia entre ejes | Corta    | Larga        | N/A           | Media            |
+   | Eficiencia        | 90-98%     | 85-95%       | 35-95%        | 80-90%           |
+   | Mantenimiento     | Medio      | Bajo         | Alto          | Medio            |
 
-Resultados clave:
-- Error de posicionamiento en piñón-cremallera: <0.5% con r=25mm
-- Tiempo de estabilización en tornillo de bolas: ≈50ms para paso 5mm/rev
+3. **Cálculo de Parámetros Dinámicos**:
+   - Inercia total reflejada al motor
+   - Torque máximo requerido
+   - Frecuencia natural del sistema
 
----
+4. **Verificación de Especificaciones**:
+   - Margen de seguridad ≥ 20%
+   - Relación de inercia J_R ≤ 5
+   - Límites térmicos del motor
+
+5. **Validación por Simulación**:
+   - Análisis modal
+   - Respuesta transitoria
+   - Efectos de backlash
+
+### 3.2 Consideraciones Avanzadas
+El documento destaca tres aspectos frecuentemente subestimados:
+
+**A. Efecto de la Rigidez Torsional**:
+En sistemas de alta precisión, la rigidez del conjunto (K) afecta directamente el error posicional:
+
+$θ_{error} = \frac{T_{load}}{K_{sistema}}$
+
+Donde:
+
+- K_sistema = 1/(Σ(1/K_i)) para elementos en serie
+- Valores típicos: 100-1000 Nm/rad para engranajes industriales
+
+**B. Pérdidas por Fricción No Lineal**:
+Las pérdidas totales incluyen:
+- Fricción viscosa (proporcional a velocidad)
+- Fricción de Coulomb (constante)
+- Fricción estática (stiction)
+
+Modelo completo:
+
+$T_{fricción} = T_c + (T_{st} - T_c)e^{-(ω/ω_s)^2} + Bω$
+
+**C. Optimización Térmica**:
+Para sistemas continuos, la temperatura de equilibrio se calcula como:
+
+$T_{eq} = T_{amb} + \frac{P_{pérdidas}}{hA}$
+
+Donde:
+- h = coeficiente de transferencia térmica (5-25 W/m²K)
+- A = área superficial efectiva
+
+### 3.3 Ejemplo Aplicado
+**Sistema de Posicionamiento Lineal**:
+- Requerimientos:
+  - Carga: 50 kg
+  - Carrera: 1 m
+  - Tiempo de posicionamiento: 2 s
+  - Precisión: ±0.1 mm
+
+**Solución Propuesta**:
+1. **Transmisión Seleccionada**: Tornillo de bolas (η=90%, p=10 mm/rev)
+2. **Cálculos**:
+
+   - Relación de transmisión:
+   
+     $N_S = \frac{2π}{0.01} = 628\ rad/m$
+     
+   - Inercia reflejada:
+
+     $J_{ref} = \frac{50}{628^2} = 1.27×10^{-4}\ kg·m²$
+
+   - Torque para aceleración (a=2 m/s²):
+
+     $T_m = \frac{50×2}{0.9×628} + 1.27×10^{-4}×314 = 0.177 + 0.040 = 0.217\ Nm$
+     
+4. **Motor Seleccionado**:
+   - J_motor = 4×10⁻⁵ kg·m²
+   - J_R = (1.27×10⁻⁴)/(4×10⁻⁵) = 3.18 (cumple J_R ≤ 5)
+   - Torque continuo ≥ 0.26 Nm (20% margen)
+
+**Resultados de Simulación**:
+- Error posicional máximo: 0.08 mm
+- Temperatura de equilibrio: 45°C (amb=25°C)
+- Vida útil estimada: >20,000 horas
 
 ## 4. Ejemplos y Aplicaciones (Ampliación)
 
