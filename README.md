@@ -56,7 +56,7 @@ La inercia reflejada incluye términos adicionales:
 $J_{ref} = J_{ip} + \left(\frac{W_{belt}}{gη}\right)r_{ip}^2 + \frac{J_{lp} + J_{load}}{ηN_{BP}^2}$
 Ejemplo: Para W_belt = 0.5Kg, r_ip = 2cm, η=95%, el término de inercia de la correa es ≈ 2.16×10⁻⁴ Kg-m².
 
-### 2.3 Tornillo Guía
+### 2.3 Piñon cremallera
 #### 2.3.1 Tipos
 El documento diferencia:
 - **Tornillos ACME**: Bajo costo pero alta fricción (η ≈ 35-85%)
@@ -198,23 +198,31 @@ Donde:
 - Temperatura de equilibrio: 45°C (amb=25°C)
 - Vida útil estimada: >20,000 horas
 
-## 4. Ejemplos y Aplicaciones (Ampliación)
+---
 
-### 4.3 Ejemplo 3: Banda Transportadora
-**Enunciado**: Sistema con W_L=15Kg, W_belt=3Kg, r_DR=4cm (N_CV=25 m⁻¹), η=88%. Calcular J_ref si J_DR=5×10⁻⁴ Kg-m².
+## 4. Ejercicios Resueltos y Explicados
+
+### 4.1 Ejercicios de Engranajes
+
+**Contexto**:  
+Los sistemas con engranajes son fundamentales cuando se requiere alta precisión en la relación de transmisión. Estos ejercicios aplican los conceptos de inercia reflejada y torque equivalente usando los datos del fabricante Apex Dynamics mencionados en las diapositivas 20-21.
+
+**Ejercicio 1**:  
+Calcule la inercia total reflejada al motor para un sistema con:
+- Motor: Inercia rotor = 2.5×10⁻⁵ kg·m² (similar al QB02301 de Allied Motion)
+- Engranaje: Relación 8:1, inercia reflejada a entrada = 0.2 kg·cm², η = 95%
+- Carga: J_load = 15×10⁻⁴ kg·m²
 
 **Solución**:
-$J_{ref} = 5×10⁻⁴ + \frac{18}{0.88×625} ≈ 3.37×10⁻² \text{Kg-m²}$
-
-### 4.4 Ejemplo 4: Tornillo Guía Horizontal
-**Enunciado**: Tornillo ACME (p=10mm/rev, η=40%) moviendo m=80Kg con μ=0.2. Calcular T_m para a=0.5m/s².
-
-**Solución**:
-$F_{ext} = μmg + ma = 0.2×80×9.81 + 80×0.5 ≈ 196.96N$
-
-$N_S = 2π/0.01 ≈ 628 \text{rad/m}$
-
-$T_m = \frac{196.96}{0.4×628} + \frac{80}{628^2}×314 ≈ 0.78 + 0.064 ≈ 0.844Nm$
+```math
+\begin{aligned}
+&1.\ \text{Convertir inercia del engranaje:} \\
+&\quad J_{GB} = 0.2\ \text{kg·cm}^2 = 2×10^{-5}\ \text{kg·m}^2 \\
+&2.\ \text{Calcular inercia reflejada de la carga:} \\
+&\quad J_{ref} = \frac{15×10^{-4}}{0.95 × 8^2} = 2.47×10^{-5}\ \text{kg·m}^2 \\
+&3.\ \text{Inercia total:} \\
+&\quad J_{total} = 2.5×10^{-5} + 2×10^{-5} + 2.47×10^{-5} = 6.97×10^{-5}\ \text{kg·m}^2
+\end{aligned}
 
 ---
 
