@@ -223,7 +223,7 @@ Calcule la inercia total reflejada al motor para un sistema con:
 &3.\ \text{Inercia total:} \\
 &\quad J_{total} = 2.5×10^{-5} + 2×10^{-5} + 2.47×10^{-5} = 6.97×10^{-5}\ \text{kg·m}^2
 \end{aligned}
-
+```
 ---
 
 ## 5. Simulación y Modelado (Profundización)
