@@ -219,3 +219,44 @@ En Simscape, configurar:
 ```matlab
 % Ejemplo engranajes con pérdidas
 gear = simscape.multibody.Gear('Efficiency', 0.95, 'MeshStiffness', 1e8);
+```
+
+## 6. Conclusiones 
+
+- El diseño adecuado de transmisiones constituye un pilar fundamental en ingeniería mecatrónica, ya que impacta directamente en tres aspectos clave: la precisión micrométrica requerida en aplicaciones CNC, la eficiencia energética que determina costos operativos a largo plazo, y la robustez necesaria para entornos industriales exigentes. Un sistema bien diseñado puede marcar la diferencia entre una operación confiable y fallos costosos.
+
+-  Más allá de los parámetros básicos, la inercia reflejada afecta la capacidad de respuesta en cambios de velocidad bruscos, mientras que el torque dinámico debe calcularse considerando los picos de aceleración en perfiles S-curve. La eficiencia mecánica, frecuentemente subestimada, puede generar pérdidas acumulativas significativas en sistemas que operan continuamente.
+
+- La especificación del torque motor debe incluir un análisis exhaustivo que contemple no solo la fricción estática inicial, sino también los requerimientos dinámicos durante cambios de velocidad, con márgenes de seguridad que varían desde el 20% para aplicaciones estables hasta el 50% en entornos con cargas impredecibles o ciclos de trabajo intensivos.
+
+- La inercia equivalente, como parámetro dinámico clave, influye directamente en la constante de tiempo del sistema. Su minimización estratégica mediante selección de materiales y relaciones de transmisión adecuadas puede mejorar hasta en un 40% los tiempos de posicionamiento en aplicaciones de alta velocidad.
+
+- El proceso de diseño completo exige la definición precisa de perfiles de movimiento, donde la elección entre trapezoidal y S-curve afecta tanto el desgaste mecánico como el consumo energético. La selección de motores debe basarse en análisis de torque RMS para operación continua y torque pico para condiciones transitorias.
+
+- La validación de sistemas existentes requiere simulaciones multifísicas que identifiquen no solo resonancias mecánicas, sino también patrones de distribución térmica que podrían limitar la vida útil de los componentes. El análisis de márgenes de seguridad debe considerar escenarios de fallo múltiple.
+
+- La variabilidad en eficiencia entre distintos tipos de transmisión (desde el 30% en sistemas de tornillo sinfín hasta 98% en engranajes planetarios de precisión) tiene implicaciones directas en el dimensionamiento de fuentes de alimentación y sistemas de refrigeración, con impacto económico significativo en operación continua.
+
+## 7. Referencias Bibliográficas  
+
+## Referencias
+
+1. **Vallery, H. & van Dijk, J.** (2020). *Control of Motion Systems*. Elsevier.  *Capítulos 4 y 5*: Modelado dinámico y selección de actuadores.
+
+2. **Beards, C.** (1996). *Dynamics of Mechanical Systems*. CRC Press.  *Sección 8.3*: Inercia equivalente en sistemas rotacionales.
+
+3. **MathWorks** (2023). *Documentación de Simscape Multibody*.  *Tutoriales*: "Modelado de transmisiones mecánicas".
+
+4. **Apex Dynamics** (2023). *Catálogo de Engranajes*.  *Tablas de eficiencia y curvas de vida útil* para engranajes planetarios.
+
+5. **Bolton, W.** (2015). *Mechatronics: Electronic Control Systems in Mechanical and Electrical Engineering* (6th ed.). Pearson Education.
+
+6. **Groover, M. P.** (2016). *Automation, Production Systems, and Computer-Integrated Manufacturing* (4th ed.). Pearson.
+
+7. **Norton, R. L.** (2013). *Diseño de maquinaria: Una introducción a la síntesis y análisis de mecanismos y máquinas* (4ta ed.). McGraw-Hill.
+
+8. **Juvinall, R. C., & Marshek, K. M.** (2011). *Fundamentals of Machine Component Design* (5th ed.). Wiley.
+
+9. **Moran, C.** (2012). *Elementos de máquinas*. Alfaomega Grupo Editor. 
+
+
