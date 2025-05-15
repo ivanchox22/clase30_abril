@@ -80,8 +80,11 @@ Ideal para:
 #### 2.4.2 Ecuaciones
 La relación depende del radio del piñón:
 $N_{RP} = \frac{1}{r_{piñón}}$
+
 Para r = 25mm → N_RP = 40 m⁻¹. El torque motor es:
+
 $T_{load→in} = \frac{F_{ext}}{ηN_{RP}}$
+
 Ejemplo: F_ext = 100N con η=85% requiere T_m ≈ 2.94Nm.
 
 ### 2.5 Banda Transportadora
