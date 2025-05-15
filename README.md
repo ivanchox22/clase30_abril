@@ -23,31 +23,14 @@ Se analiza cinco tipos principales de transmisión: engranajes, polea-correa, to
 
 ## 2. Tipos de Transmisiones
 
-### 2.1 Engranajes
-#### 2.1.1 Características
-Los engranajes son elementos dentados que transmiten movimiento circular entre ejes paralelos o perpendiculares. Ofrecen alta precisión (backlash < 1 arcmin en sistemas premium) y capacidad de carga (hasta 500 Nm en cajas industriales). Según el documento, su diseño debe considerar:
-- **Relación de inercia (J_R)**: Idealmente ≤ 5 para evitar sobredimensionamiento (ejemplo calculado: J_R = 3.75 para engranaje 5:1 con J_load = 10×10⁻⁴ Kg-m²).
-- **Pérdidas por eficiencia**: Típicamente η = 90-98% por fricción entre dientes.
-
-#### 2.1.2 Ecuaciones Fundamentales
-La inercia reflejada en engranajes sigue:
-
-$J_{ref} = \frac{J_{load}}{ηN_{GB}^2}$
-
-Ejemplo del documento: Para N = 5 y η = 97%, una carga de 10×10⁻⁴ Kg-m² refleja 4.124×10⁻⁵ Kg-m² al motor. El torque motor se calcula como:
-
-$T_m = \frac{T_l}{ηN_{GB}} + J_{total}\ddotθ$
-
-donde J_total incluye inercias del motor, acople y engranajes.
-
-### 2.2 Polea-Correa
-#### 2.2.1 Configuraciones
+### 2.1 Polea-Correa
+#### 2.1.1 Configuraciones
 Las transmisiones por correa pueden ser:
 - **Lisas**: Para bajas cargas y alta velocidad (ej. ventiladores)
 - **Dentadas**: Precisión sincrónica (ej. ejes CNC)
 El documento destaca su simplicidad y capacidad para distancias entre ejes mayores que en engranajes (hasta 5m en sistemas industriales).
 
-#### 2.2.2 Relaciones de Transmisión
+#### 2.1.2 Relaciones de Transmisión
 La velocidad tangencial uniforme en la correa implica:
 $ω_{ip}·r_{ip} = ω_{lp}·r_{lp}$
 Por tanto, la relación es:
@@ -56,13 +39,13 @@ La inercia reflejada incluye términos adicionales:
 $J_{ref} = J_{ip} + \left(\frac{W_{belt}}{gη}\right)r_{ip}^2 + \frac{J_{lp} + J_{load}}{ηN_{BP}^2}$
 Ejemplo: Para W_belt = 0.5Kg, r_ip = 2cm, η=95%, el término de inercia de la correa es ≈ 2.16×10⁻⁴ Kg-m².
 
-### 2.3 Piñon cremallera
-#### 2.3.1 Tipos
+### 2.2 Piñon cremallera
+#### 2.2.1 Tipos
 El documento diferencia:
 - **Tornillos ACME**: Bajo costo pero alta fricción (η ≈ 35-85%)
 - **Tornillos de bolas**: Alta eficiencia (85-95%) y vida útil (>20,000h en aplicaciones CNC)
 
-#### 2.3.2 Parámetros Clave
+#### 2.2.2 Parámetros Clave
 El paso (p) define la relación lineal-angular:
 $N_S = 2πp \quad \text{[rad/m]}$
 Ejemplo con p = 0.75cm/rev → N_S ≈ 838 rad/m. La inercia reflejada para m = 50Kg es:
@@ -71,13 +54,13 @@ El torque motor considera fuerzas externas:
 $T_m = \frac{F_{ext}}{ηN_S} + J_{total}\ddotθ$
 donde F_ext incluye fricción (μ(W_L+W_C)cosβ) y componente gravitacional ((W_L+W_C)sinβ).
 
-### 2.4 Piñón-Cremallera
-#### 2.4.1 Aplicaciones
+### 2.3 Piñón-Cremallera
+#### 2.3.1 Aplicaciones
 Ideal para:
 - Mesas de posicionamiento lineal (precisión ±0.1mm)
 - Sistemas de transporte pesado (ej. grúas puente)
 
-#### 2.4.2 Ecuaciones
+#### 2.3.2 Ecuaciones
 La relación depende del radio del piñón:
 $N_{RP} = \frac{1}{r_{piñón}}$
 
@@ -87,13 +70,13 @@ $T_{load→in} = \frac{F_{ext}}{ηN_{RP}}$
 
 Ejemplo: F_ext = 100N con η=85% requiere T_m ≈ 2.94Nm.
 
-### 2.5 Banda Transportadora
-#### 2.5.1 Configuraciones
+### 2.4 Banda Transportadora
+#### 2.4.1 Configuraciones
 El documento analiza:
 - **Bandas planas**: Para cargas uniformes (ej. packaging)
 - **Con rodillos locos**: Reducen fricción en largas distancias
 
-#### 2.5.2 Inercia Reflejada
+#### 2.4.2 Inercia Reflejada
 Incluye múltiples componentes:
 $J_{ref} = 2J_p + \frac{1}{ηN_{BD}^2}\left(\frac{W_L + W_C + W_{belt}}{g}\right)$
 Para W_belt = 2Kg, W_L = 10Kg, r_ip = 5cm (N_BD=20 m⁻¹), η=90%:
