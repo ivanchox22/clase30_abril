@@ -158,6 +158,11 @@ $J_{ref} = J_{in} + \frac{J_{out}}{ηN_{BG}^2}$
 $J_{ref} ≈ \frac{5×10⁻³}{0.9×4} ≈ 1.39×10⁻³ \text{Kg-m²}$
 
 ### 2.8 💡 Ejemplo Transmisión Polea-Correa
+
+![image](https://github.com/user-attachments/assets/beeafd6b-6422-494f-8982-9bb9deeb6354)
+
+fig 2. Trasmision Polea-Correa.
+
 Un sistema tiene r_ip = 3cm, r_lp = 9cm, W_belt = 0.8Kg, J_lp = 0.002 Kg-m², J_load = 0.005 Kg-m², η=92%. Calcule:  
 a) Relación de transmisión  
 b) Inercia reflejada total  
