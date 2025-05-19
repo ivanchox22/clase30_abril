@@ -82,8 +82,11 @@ El documento analiza:
 
 #### 2.4.2 Inercia Reflejada
 Incluye múltiples componentes:
+
 $J_{ref} = 2J_p + \frac{1}{ηN_{BD}^2}\left(\frac{W_L + W_C + W_{belt}}{g}\right)$
+
 Para W_belt = 2Kg, W_L = 10Kg, r_ip = 5cm (N_BD=20 m⁻¹), η=90%:
+
 $J_{ref} ≈ 2(1×10⁻⁴) + \frac{12}{0.9×400} ≈ 3.33×10⁻² \text{Kg-m²}$
 
 ### 2.5 Transmisión por Cadena
@@ -100,7 +103,7 @@ La relación depende del número de dientes:
 
 $N_{CP} = \frac{z_1}{z_2}$
 
-Ejemplo con z1=20, z2=40 → N_CP=0.5. La inercia reflejada incluye:
+💡 Ejemplo con z1=20, z2=40 → N_CP=0.5. La inercia reflejada incluye:
 
 $J_{ref} = J_{m} + \frac{J_{load}}{ηN_{CP}^2} + m_{chain}·r_{sprocket}^2$
 
@@ -128,7 +131,7 @@ Para p=6mm/rev → N_WS≈1047 rad/m. Torque requerido:
 
 $T_m = \frac{F_{axial}}{ηN_{WS}} + J_{eq}\ddotθ$
 
-Ejemplo con F=500N, η=70%:
+💡 Ejemplo con F=500N, η=70%:
 
 $T_m ≈ \frac{500}{0.7×1047} ≈ 0.68 \text{Nm}$
 
@@ -150,9 +153,87 @@ Para r_in=30mm, r_out=60mm → N_BG=2. Inercia reflejada:
 
 $J_{ref} = J_{in} + \frac{J_{out}}{ηN_{BG}^2}$
 
-Ejemplo con J_out=5×10⁻³ Kg-m², η=90%:
+💡 Ejemplo con J_out=5×10⁻³ Kg-m², η=90%:
 
 $J_{ref} ≈ \frac{5×10⁻³}{0.9×4} ≈ 1.39×10⁻³ \text{Kg-m²}$
+
+### 2.8 💡 Ejercicio Transmisión Polea-Correa
+Un sistema tiene r_ip = 3cm, r_lp = 9cm, W_belt = 0.8Kg, J_lp = 0.002 Kg-m², J_load = 0.005 Kg-m², η=92%. Calcule:  
+a) Relación de transmisión  
+b) Inercia reflejada total  
+
+**Solución**:  
+a) $N_{BP} = \frac{r_{lp}}{r_{ip}} = \frac{9}{3} = 3$  
+
+b) $J_{ref} = J_{ip} + \left(\frac{0.8}{9.81×0.92}\right)0.03^2 + \frac{0.002+0.005}{0.92×3^2}$  
+
+   $= J_{ip} + 8.5×10⁻⁵ + 8.45×10⁻⁴ \text{ Kg-m²}$  
+
+### 2.9  💡 Ejercicio 2 Piñón-Cremallera
+
+Para p = 5mm/rev, m_load = 25Kg, μ = 0.2 en plano inclinado (β=15°):  
+
+a) Calcule N_S  
+
+b) Torque para aceleración de 0.5m/s²  
+
+**Solución**:  
+a) $N_S = \frac{2π}{0.005} = 1257 \text{ rad/m}$  
+b) $F_{ext} = 25(9.81\sin15° + 0.2×9.81\cos15° + 0.5) ≈ 104.3 \text{N}$  
+   $T_m = \frac{104.3}{0.9×1257} + J_{total}·\ddotθ ≈ 0.092 \text{Nm} + J_{total}·\ddotθ$  
+
+### 2.10 💡 Ejercicio Banda Transportadora
+
+Sistema con W_L = 15Kg, W_belt = 3Kg, 4 poleas (J_p=1.5×10⁻⁴ Kg-m² c/u), r_ip = 4cm, η=88%:  
+
+a) Inercia reflejada total  
+
+**Solución**:  
+$N_{BD} = \frac{1}{0.04} = 25 \text{ m⁻¹}$  
+
+$J_{ref} = 4×1.5×10⁻⁴ + \frac{15+3}{0.88×625} ≈ 6×10⁻⁴ + 0.0327 ≈ 0.0333 \text{ Kg-m²}$  
+
+---
+
+### 2.11 💡 Ejercicio 4 Transmisión por Cadena
+
+z1=18, z2=54, m_chain=2Kg, r_sprocket=8cm, J_load=0.01 Kg-m²:
+
+a) Relación N_CP  
+
+b) Inercia reflejada (sin η)  
+
+**Solución**:  
+a) $N_{CP} = \frac{18}{54} = 0.333$  
+
+b) $J_{ref} = J_m + \frac{0.01}{0.333^2} + 2×0.08^2 ≈ J_m + 0.09 + 0.0128 \text{ Kg-m²}$  
+
+---
+
+### 2.12 💡 Ejercicio 5 Tornillo Sin Fin
+
+p=8mm/rev, F_axial=750N, J_eq=0.002 Kg-m², α=2 rad/s²:  
+
+a) N_WS  
+
+b) Torque estático + dinámico (η=75%)  
+
+**Solución**:  
+a) $N_{WS} = \frac{2π}{0.008} = 785 \text{ rad/m}$  
+
+b) $T_m = \frac{750}{0.75×785} + 0.002×2 ≈ 1.27 + 0.004 ≈ 1.274 \text{Nm}$  
+
+### 2.13 💡 Ejercicio Engranajes Cónicos
+
+r_in=20mm, r_out=80mm, J_out=0.008 Kg-m², η=85%:
+
+a) N_BG  
+
+b) J_ref (J_in despreciable)  
+
+**Solución**:  
+a) $N_{BG} = \frac{80}{20} = 4$  
+b) $J_{ref} ≈ \frac{0.008}{0.85×16} ≈ 5.88×10⁻⁴ \text{ Kg-m²}$  
 
 ---
 
