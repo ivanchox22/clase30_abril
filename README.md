@@ -5,6 +5,10 @@ Los sistemas de transmisión mecánica son componentes críticos en el control d
 
 Se analiza cinco tipos principales de transmisión: engranajes, polea-correa, tornillo guía, piñón-cremallera y banda transportadora. Cada una presenta ventajas específicas según los requerimientos de carga, precisión y condiciones operativas. Por ejemplo, los engranajes ofrecen alta precisión en posicionamiento, mientras que las bandas transportadoras son ideales para mover cargas ligeras a largas distancias. El diseño óptimo considera no solo parámetros mecánicos sino también aspectos dinámicos como la inercia reflejada y el torque efectivo en el motor.
 
+![image](https://github.com/user-attachments/assets/d390e7ab-ae9c-4de0-98d9-3a55e7d57236)
+
+Fig 1. Sitemas de transmision.
+
 ---
 
 ## 1. Fundamentos de Transmisión Mecánica
