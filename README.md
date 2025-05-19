@@ -344,7 +344,7 @@ Donde:
 ### 4.1 Ejercicios de Engranajes
 
 **Contexto**:  
-Los sistemas con engranajes son fundamentales cuando se requiere alta precisión en la relación de transmisión. Estos ejercicios aplican los conceptos de inercia reflejada y torque equivalente usando los datos del fabricante Apex Dynamics mencionados en las diapositivas 20-21.
+- Los sistemas con engranajes son fundamentales cuando se requiere alta precisión en la relación de transmisión. Estos ejercicios aplican los conceptos de inercia reflejada y torque equivalente usando los datos del fabricante Apex Dynamics mencionados en las diapositivas 20-21.
 
 **Ejercicio 1**:  
 Calcule la inercia total reflejada al motor para un sistema con:
@@ -368,7 +368,7 @@ Calcule la inercia total reflejada al motor para un sistema con:
  
 **Enunciado:**
 
-Una carga requiere un torque de 12 Nm a 100 rpm. La transmisión tiene una relación \( N_{\text{GB}} = 3 \) y eficiencia \( \eta = 0.9 \). Determine el torque mínimo requerido en el motor.
+- Una carga requiere un torque de 12 Nm a 100 rpm. La transmisión tiene una relación \( N_{\text{GB}} = 3 \) y eficiencia \( \eta = 0.9 \). Determine el torque mínimo requerido en el motor.
 
 **Solución:**
 
@@ -390,7 +390,7 @@ $T_m = \frac{T_{\text{load}}}{\eta \cdot N_{\text{GB}}} = \frac{12}{0.9 \times 3
 
 ### Enunciado:
 
-Un sistema de elevación requiere un torque de 18 Nm a 150 rpm en el eje de salida. La transmisión tiene una relación de reducción (N) = 4 y una eficiencia (η) = 0.85. Determine:
+- Un sistema de elevación requiere un torque de 18 Nm a 150 rpm en el eje de salida. La transmisión tiene una relación de reducción (N) = 4 y una eficiencia (η) = 0.85. Determine:
 
 1. El torque mínimo requerido en el motor
 2. La potencia requerida por el motor
