@@ -132,7 +132,7 @@ $θ_{error} = \frac{T_{load}}{K_{sistema}}$
 
 Donde:
 
-- K_sistema = 1/(Σ(1/K_i)) para elementos en serie
+- $K_sistema = 1/(Σ(1/K_i))$ para elementos en serie
 - Valores típicos: 100-1000 Nm/rad para engranajes industriales
 
 **B. Pérdidas por Fricción No Lineal**:
