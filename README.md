@@ -157,7 +157,7 @@ $J_{ref} = J_{in} + \frac{J_{out}}{ηN_{BG}^2}$
 
 $J_{ref} ≈ \frac{5×10⁻³}{0.9×4} ≈ 1.39×10⁻³ \text{Kg-m²}$
 
-### 2.8 💡 Ejercicio Transmisión Polea-Correa
+### 2.8 💡 Ejemplo Transmisión Polea-Correa
 Un sistema tiene r_ip = 3cm, r_lp = 9cm, W_belt = 0.8Kg, J_lp = 0.002 Kg-m², J_load = 0.005 Kg-m², η=92%. Calcule:  
 a) Relación de transmisión  
 b) Inercia reflejada total  
@@ -169,7 +169,7 @@ b) $J_{ref} = J_{ip} + \left(\frac{0.8}{9.81×0.92}\right)0.03^2 + \frac{0.002+0
 
    $= J_{ip} + 8.5×10⁻⁵ + 8.45×10⁻⁴ \text{ Kg-m²}$  
 
-### 2.9  💡 Ejercicio 2 Piñón-Cremallera
+### 2.9  💡 Ejemplo 2 Piñón-Cremallera
 
 Para p = 5mm/rev, m_load = 25Kg, μ = 0.2 en plano inclinado (β=15°):  
 
@@ -182,7 +182,7 @@ a) $N_S = \frac{2π}{0.005} = 1257 \text{ rad/m}$
 b) $F_{ext} = 25(9.81\sin15° + 0.2×9.81\cos15° + 0.5) ≈ 104.3 \text{N}$  
    $T_m = \frac{104.3}{0.9×1257} + J_{total}·\ddotθ ≈ 0.092 \text{Nm} + J_{total}·\ddotθ$  
 
-### 2.10 💡 Ejercicio Banda Transportadora
+### 2.10 💡 Ejemplo Banda Transportadora
 
 Sistema con W_L = 15Kg, W_belt = 3Kg, 4 poleas (J_p=1.5×10⁻⁴ Kg-m² c/u), r_ip = 4cm, η=88%:  
 
@@ -195,7 +195,7 @@ $J_{ref} = 4×1.5×10⁻⁴ + \frac{15+3}{0.88×625} ≈ 6×10⁻⁴ + 0.0327 �
 
 ---
 
-### 2.11 💡 Ejercicio 4 Transmisión por Cadena
+### 2.11 💡 Ejemplo Transmisión por Cadena
 
 z1=18, z2=54, m_chain=2Kg, r_sprocket=8cm, J_load=0.01 Kg-m²:
 
@@ -223,7 +223,7 @@ a) $N_{WS} = \frac{2π}{0.008} = 785 \text{ rad/m}$
 
 b) $T_m = \frac{750}{0.75×785} + 0.002×2 ≈ 1.27 + 0.004 ≈ 1.274 \text{Nm}$  
 
-### 2.13 💡 Ejercicio Engranajes Cónicos
+### 2.13 💡 Ejemplo Engranajes Cónicos
 
 r_in=20mm, r_out=80mm, J_out=0.008 Kg-m², η=85%:
 
