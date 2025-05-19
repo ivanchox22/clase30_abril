@@ -453,7 +453,7 @@ $T_{seguridad} = T_{motor} \times 1.25 = 5.29 \times 1.25 \approx 6.61 \, \text{
 ## 5. Simulación y Modelado (Profundización)
 
 ### 5.1 Introducción a Modelado Dinámico
-#### 5.1.1 Herramientas Recomendadas
+- Herramientas Recomendadas
 - **MATLAB/Simulink**: Para modelado físico con Simscape Multibody
 - **Adams**: Análisis de fuerzas en sistemas complejos
 - **SolidWorks Motion**: Integración directa con modelos CAD
@@ -465,7 +465,124 @@ load_system(sys);
 ## 6. Conclusiones
 ```
 
+### 5.2 Modelado de Sistemas Ideales
 
+#### 5.2.1 Configuración Básica
+
+Para sistemas sin pérdidas:
+
+```matlab
+% Transmisión por correa ideal
+belt_ideal = beltDrive('Rigid', 'on', 'Slip', 'off');
+```
+
+#### 5.2.2 Parámetros Clave
+
+- Stiffness: Rigidez de la transmisión **(default 1e6 N/m)**
+
+- Damping: Amortiguamiento **(default 1e3 N·s/m)**
+
+### 5.3 Modelado de Pérdidas
+
+#### 5.3.1 Tipos de Pérdidas
+
+Fricción Coulomb: **friction = simscape.Friction('Coulomb', 0.2);**
+
+Pérdidas por histéresis: **hysteresisLoss(gear, 'Factor', 0.03);**
+
+Resistencia al rodamiento: **bearingLoss = bearing('FrictionModel', 'Torque', 0.01);**
+
+#### 5.3.2 💡 Ejemplo Completo Engranajes
+```matlab
+
+% Configuración de engranaje con pérdidas
+gear_losses = simscape.multibody.Gear(...
+    'Efficiency', 0.92, ...
+    'MeshStiffness', 1.2e8, ...
+    'Backlash', 0.0001, ...
+    'FrictionTorque', 0.5);
+
+```
+
+### 5.4 Validación Experimental
+
+#### 5.4.1 Comparación Modelo-Real
+
+```matlab
+
+% Script para comparación de datos
+[simTime, simTorque] = simOut.logsout.getElement('Torque').Values.Data;
+[expTime, expTorque] = importExperimentalData('test1.csv');
+
+plotComparison(simTime, simTorque, expTime, expTorque);
+
+```
+
+#### 5.4.2 Métricas de Validación
+
+- Error RMS: **rms_error = sqrt(mean((simData - expData).^2));**
+
+- Coeficiente R²: **R2 = 1 - sum((expData - simData).^2)/sum((expData - mean(expData)).^2);**
+
+### 5.5 Caso de Estudio: Transmisión Industrial
+
+#### 5.5.1 Modelo Completo
+
+```matlab
+
+% Sistema de transmisión industrial completa
+industrialSystem = multibody.TransmissionSystem(...
+    'Gears', {gear_losses}, ...
+    'Belts', {belt_ideal}, ...
+    'Bearings', {bearingLoss}, ...
+    'InputSpeed', 1750, ... % RPM
+    'LoadTorque', 150); % Nm
+
+```
+
+#### 5.5.2 Análisis de Resultados
+
+```matlab
+
+% Post-procesamiento automático
+results = simulate(industrialSystem);
+plotEfficiency(results);
+plotPowerLoss(results);
+
+```
+
+### 5.6 Ejercicios Prácticos
+
+#### 5.6.1 Calibración de Modelo
+
+```matlab
+
+% Ajuste de parámetros de fricción
+frictionParams = optimizableVariable('CoulombFric', [0.1, 0.5]);
+optimResults = bayesopt(@(p) modelCalibrationError(p), frictionParams);
+
+```
+#### 5.6.2 Análisis de Sensibilidad
+
+```matlab
+
+% Sensibilidad de la eficiencia a la rigidez
+stiffnessRange = logspace(6, 9, 50);
+efficiency = arrayfun(@(k) computeEfficiency(k), stiffnessRange);
+loglog(stiffnessRange, efficiency);
+
+```
+
+### 5.7 Recursos Adicionales
+
+- Librerías: **Simscape Driveline** (para transmisiones)
+
+- Tutoriales: MathWorks "Modeling Power Transmission Systems"
+
+- Datos Experimentales: **NREL Drivetrain Database**
+
+
+## 6. Conclusiones 
 
 - El diseño adecuado de transmisiones constituye un pilar fundamental en ingeniería mecatrónica, ya que impacta directamente en tres aspectos clave: la precisión micrométrica requerida en aplicaciones CNC, la eficiencia energética que determina costos operativos a largo plazo, y la robustez necesaria para entornos industriales exigentes. Un sistema bien diseñado puede marcar la diferencia entre una operación confiable y fallos costosos.
 
