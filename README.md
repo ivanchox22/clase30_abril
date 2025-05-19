@@ -212,6 +212,10 @@ fig 4. Banda Transportadora.
 
 ### 2.11 💡 Ejemplo Transmisión por Cadena
 
+![image](https://github.com/user-attachments/assets/be47fc55-766b-443a-afd3-570ccfcb726e)
+
+fig 5. Transmisión por Cadena.
+
 - z1=18, z2=54, m_chain=2Kg, r_sprocket=8cm, J_load=0.01 Kg-m²:
 
 - a) Relación N_CP  
@@ -448,14 +452,20 @@ $T_{seguridad} = T_{motor} \times 1.25 = 5.29 \times 1.25 \approx 6.61 \, \text{
 
 ## 5. Simulación y Modelado (Profundización)
 
-### 5.3 Modelado de Pérdidas
-En Simscape, configurar:
+### 5.1 Introducción a Modelado Dinámico
+#### 5.1.1 Herramientas Recomendadas
+- **MATLAB/Simulink**: Para modelado físico con Simscape Multibody
+- **Adams**: Análisis de fuerzas en sistemas complejos
+- **SolidWorks Motion**: Integración directa con modelos CAD
+
 ```matlab
-% Ejemplo engranajes con pérdidas
-gear = simscape.multibody.Gear('Efficiency', 0.95, 'MeshStiffness', 1e8);
+% Ejemplo básico de sistema masa-resorte-amortiguador
+sys = 'mass_spring_damper.slx';
+load_system(sys);
+## 6. Conclusiones
 ```
 
-## 6. Conclusiones 
+
 
 - El diseño adecuado de transmisiones constituye un pilar fundamental en ingeniería mecatrónica, ya que impacta directamente en tres aspectos clave: la precisión micrométrica requerida en aplicaciones CNC, la eficiencia energética que determina costos operativos a largo plazo, y la robustez necesaria para entornos industriales exigentes. Un sistema bien diseñado puede marcar la diferencia entre una operación confiable y fallos costosos.
 
