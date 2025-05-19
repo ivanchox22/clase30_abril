@@ -176,6 +176,10 @@ b) $J_{ref} = J_{ip} + \left(\frac{0.8}{9.81×0.92}\right)0.03^2 + \frac{0.002+0
 
 ### 2.9  💡 Ejemplo 2 Piñón-Cremallera
 
+![image](https://github.com/user-attachments/assets/5bb81d3f-825b-48e0-bad9-db3bd7ae8178)
+
+fig 3. Piñón-Cremallera.
+
 Para p = 5mm/rev, m_load = 25Kg, μ = 0.2 en plano inclinado (β=15°):  
 
 a) Calcule N_S  
