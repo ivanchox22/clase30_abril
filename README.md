@@ -231,6 +231,10 @@ fig 5. Transmisión por Cadena.
 
 ### 2.12 💡 Ejercicio 5 Tornillo Sin Fin
 
+![image](https://github.com/user-attachments/assets/e9caacb8-72cc-410b-ba40-014fbdd89004)
+
+fig 6. Tornillo Sin Fin.
+
 - p=8mm/rev, F_axial=750N, J_eq=0.002 Kg-m², α=2 rad/s²:  
 
 - a) N_WS  
