@@ -95,45 +95,65 @@ Las transmisiones por cadena se utilizan en:
 - **Entornos hostiles**: Resistencia a polvo/aceite (ej. motores industriales)
 
 #### 2.5.2 Relaciones de Transmisión
+
 La relación depende del número de dientes:
+
 $N_{CP} = \frac{z_1}{z_2}$
 
 Ejemplo con z1=20, z2=40 → N_CP=0.5. La inercia reflejada incluye:
+
 $J_{ref} = J_{m} + \frac{J_{load}}{ηN_{CP}^2} + m_{chain}·r_{sprocket}^2$
+
 Para m_chain=1.2Kg, r=0.1m, η=85%:
+
 $J_{chain} ≈ 1.2×0.1^2 = 1.2×10⁻² \text{Kg-m²}$
 
 ---
 
 ### 2.6 Transmisión por Tornillo Sin Fin
+
 #### 2.6.1 Características
+
 - **Alta reducción**: Relaciones típicas 5:1 a 100:1
+
 - **Autobloqueo**: Cuando el ángulo de hélice < φ_fricción
 
 #### 2.6.2 Parámetros Clave
+
 La relación de reducción es:
+
 $N_{WS} = \frac{2π}{p}$
 
 Para p=6mm/rev → N_WS≈1047 rad/m. Torque requerido:
+
 $T_m = \frac{F_{axial}}{ηN_{WS}} + J_{eq}\ddotθ$
+
 Ejemplo con F=500N, η=70%:
+
 $T_m ≈ \frac{500}{0.7×1047} ≈ 0.68 \text{Nm}$
 
 ---
 
 ### 2.7 Transmisión por Engranajes Cónicos
 #### 2.7.1 Aplicaciones
+
 - **Cambio de eje**: Sistemas con ejes no paralelos (ej. diferenciales automotrices)
+
 - **Precisión angular**: Robots articulados (±0.05° repetibilidad)
 
 #### 2.7.2 Ecuaciones Fundamentales
 Relación de transmisión:
+
 $N_{BG} = \frac{r_{out}}{r_{in}}$
 
 Para r_in=30mm, r_out=60mm → N_BG=2. Inercia reflejada:
+
 $J_{ref} = J_{in} + \frac{J_{out}}{ηN_{BG}^2}$
+
 Ejemplo con J_out=5×10⁻³ Kg-m², η=90%:
+
 $J_{ref} ≈ \frac{5×10⁻³}{0.9×4} ≈ 1.39×10⁻³ \text{Kg-m²}$
+
 ---
 
 ## 3. Diseño de Sistemas de Transmisión (Ampliado)
