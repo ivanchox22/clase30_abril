@@ -195,6 +195,10 @@ fig 3. Piñón-Cremallera.
 
 ### 2.10 💡 Ejemplo Banda Transportadora
 
+![image](https://github.com/user-attachments/assets/c522718c-8b8c-4517-9a16-c70df104057b)
+
+fig 4. Banda Transportadora.
+
 - Sistema con W_L = 15Kg, W_belt = 3Kg, 4 poleas (J_p=1.5×10⁻⁴ Kg-m² c/u), r_ip = 4cm, η=88%:  
 
 - a) Inercia reflejada total  
