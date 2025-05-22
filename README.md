@@ -1,6 +1,5 @@
 # Elementos de Transmisión en Sistemas de Control de Movimiento
 
-## Introducción
 Los sistemas de transmisión mecánica son componentes críticos en el control de movimiento, actuando como interfaz entre el motor y la carga. Estos sistemas permiten adaptar las características del motor (velocidad, torque) a los requerimientos específicos de la aplicación, ya sea para incrementar el torque reduciendo la velocidad o viceversa. En aplicaciones industriales como robots, CNC o sistemas de automatización, la selección adecuada del tipo de transmisión impacta directamente en la precisión, eficiencia energética y vida útil del sistema.
 
 Se analiza cinco tipos principales de transmisión: engranajes, polea-correa, tornillo guía, piñón-cremallera y banda transportadora. Cada una presenta ventajas específicas según los requerimientos de carga, precisión y condiciones operativas. Por ejemplo, los engranajes ofrecen alta precisión en posicionamiento, mientras que las bandas transportadoras son ideales para mover cargas ligeras a largas distancias. El diseño óptimo considera no solo parámetros mecánicos sino también aspectos dinámicos como la inercia reflejada y el torque efectivo en el motor.
