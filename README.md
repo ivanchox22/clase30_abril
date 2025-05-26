@@ -14,11 +14,10 @@ Fig 1. Sitemas de transmision.
 
 ### 1.1 Conceptos Básicos
 
-"
-🔑 *Transmisión mecánica*: Sistema que adapta el movimiento y potencia del motor a los requerimientos de la carga mediante elementos intermedios. Estos sistemas transforman características cinemáticas (velocidad angular) y dinámicas (torque) según relaciones matemáticas precisas.
+>🔑 *Transmisión mecánica*: Sistema que adapta el movimiento y potencia del motor a los requerimientos de la carga mediante elementos intermedios. Estos sistemas transforman características cinemáticas (velocidad angular) y dinámicas (torque) según relaciones matemáticas precisas.
 
-🔑 *Relación de transmisión (N)*: Factor que relaciona las velocidades de entrada y salida del sistema. En engranajes, depende del número de dientes (N = N_l/N_m); en poleas, de los radios (N = r_l/r_p). Valores N > 1 indican reducción de velocidad (aumento de torque), mientras N < 1 implican multiplicación de velocidad.
-"
+>🔑 *Relación de transmisión (N)*: Factor que relaciona las velocidades de entrada y salida del sistema. En engranajes, depende del número de dientes (N = N_l/N_m); en poleas, de los radios (N = r_l/r_p). Valores N > 1 indican reducción de velocidad (aumento de torque), mientras N < 1 implican multiplicación de velocidad.
+
 
 ### 1.2 Parámetros Clave
 - **Inercia (J)**: Resistencia al cambio de velocidad angular, análoga rotacional a la masa en sistemas lineales. En el documento se destaca su importancia en sistemas con aceleraciones rápidas (ej. robots delta), donde altas inercias reflejadas requieren motores más potentes.
