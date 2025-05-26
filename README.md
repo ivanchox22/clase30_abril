@@ -27,6 +27,9 @@ Fig 1. Sitemas de transmision.
 ## 2. Tipos de Transmisiones
 
 ### 2.1 Polea-Correa
+
+Las transmisiones por correa son un sistema mecánico ampliamente utilizado para transferir movimiento entre ejes separados. Existen dos tipos principales: correas lisas, ideales para aplicaciones de baja carga y alta velocidad como ventiladores, y correas dentadas, que ofrecen precisión sincrónica, comúnmente empleadas en ejes de máquinas CNC. Estos sistemas destacan por su simplicidad de diseño y su capacidad para cubrir distancias entre ejes mayores que otros mecanismos, llegando hasta los 5 metros en entornos industriales. Además, su relación de transmisión se basa en la velocidad tangencial uniforme de la correa, lo que permite calcular parámetros clave como la inercia reflejada, que incluye efectos adicionales como la masa de la correa y las pérdidas por eficiencia.
+
 #### 2.1.1 Configuraciones
 Las transmisiones por correa pueden ser:
 - **Lisas**: Para bajas cargas y alta velocidad (ej. ventiladores)
@@ -43,6 +46,9 @@ $J_{ref} = J_{ip} + \left(\frac{W_{belt}}{gη}\right)r_{ip}^2 + \frac{J_{lp} + J
 Ejemplo: Para W_belt = 0.5Kg, r_ip = 2cm, η=95%, el término de inercia de la correa es ≈ 2.16×10⁻⁴ Kg-m².
 
 ### 2.2 Piñon cremallera
+
+Los sistemas de piñón-cremallera son fundamentales para convertir movimiento rotacional en lineal con alta precisión. Entre las variantes más comunes se encuentran los tornillos ACME, caracterizados por su bajo costo pero menor eficiencia debido a la fricción, y los tornillos de bolas, que ofrecen un rendimiento superior (85-95% de eficiencia) y una vida útil prolongada, superando los 20.000 metros en aplicaciones exigentes como las máquinas CNC. Este mecanismo es esencial en aplicaciones que requieren movimientos lineales controlados y repetitivos, donde la elección entre fricción deslizante (ACME) o rodamiento (bolas) depende del equilibrio entre costo, precisión y durabilidad.
+
 #### 2.2.1 Tipos
 El documento diferencia:
 - **Tornillos ACME**: Bajo costo pero alta fricción (η ≈ 35-85%)
@@ -74,6 +80,9 @@ $T_{load→in} = \frac{F_{ext}}{ηN_{RP}}$
 Ejemplo: F_ext = 100N con η=85% requiere T_m ≈ 2.94Nm.
 
 ### 2.4 Banda Transportadora
+
+Las bandas transportadoras son sistemas fundamentales en la industria para el manejo de materiales de manera continua y eficiente. Utilizadas en sectores como minería, logística y manufactura, estas bandas pueden transportar productos a granel o empaquetados sobre una superficie móvil, generalmente fabricada de caucho, PVC u otros materiales resistentes. Su diseño permite adaptarse a diferentes entornos, incluyendo inclinaciones y curvas, mientras garantizan un flujo constante de materiales con bajo consumo energético y alta capacidad de carga.
+
 #### 2.4.1 Configuraciones
 El documento analiza:
 - **Bandas planas**: Para cargas uniformes (ej. packaging)
@@ -89,6 +98,8 @@ Para W_belt = 2Kg, W_L = 10Kg, r_ip = 5cm (N_BD=20 m⁻¹), η=90%:
 $J_{ref} ≈ 2(1×10⁻⁴) + \frac{12}{0.9×400} ≈ 3.33×10⁻² \text{Kg-m²}$
 
 ### 2.5 Transmisión por Cadena
+
+La transmisión por cadena es un mecanismo robusto y eficiente, ideal para aplicaciones que requieren alta resistencia y sincronización, como en motocicletas, maquinaria industrial y sistemas de transporte. Compuesto por una cadena metálica que engrana con ruedas dentadas (sprockets), este sistema destaca por su durabilidad, capacidad para transmitir grandes cargas y mínima pérdida de potencia. A diferencia de las correas, las cadenas no sufren deslizamiento, lo que las hace ideales para entornos con cargas pesadas o condiciones adversas.
 
 #### 2.5.1 Configuraciones
 
@@ -114,6 +125,8 @@ $J_{chain} ≈ 1.2×0.1^2 = 1.2×10⁻² \text{Kg-m²}$
 
 ### 2.6 Transmisión por Tornillo Sin Fin
 
+El tornillo sinfín es un sistema de transmisión compacto y de alta reducción de velocidad, comúnmente empleado en aplicaciones que requieren gran torque y movimiento lento, como elevadores, tolvas y maquinaria pesada. Consiste en un tornillo helicoidal (sinfín) que engrana con una rueda dentada (corona), logrando una relación de transmisión muy alta en un espacio reducido. Aunque su eficiencia es menor debido a la fricción deslizante, su capacidad de autobloqueo lo hace ideal para sistemas de seguridad donde se necesita evitar retrocesos.
+
 #### 2.6.1 Características
 
 - **Alta reducción**: Relaciones típicas 5:1 a 100:1
@@ -137,6 +150,9 @@ $T_m ≈ \frac{500}{0.7×1047} ≈ 0.68 \text{Nm}$
 ---
 
 ### 2.7 Transmisión por Engranajes Cónicos
+
+Los engranajes cónicos son utilizados para transmitir movimiento entre ejes que se intersectan, generalmente a 90 grados. Este tipo de engranaje es esencial en aplicaciones como diferenciales de vehículos, maquinaria pesada y sistemas de dirección, donde se requiere cambiar la dirección del movimiento rotacional con alta precisión y eficiencia. Su diseño en forma de cono permite una transferencia de potencia suave y silenciosa, especialmente cuando están fabricados con materiales de alta calidad y acabados de precisión. Su versatilidad los hace indispensables en sistemas que combinan fuerza y cambios de dirección.
+
 #### 2.7.1 Aplicaciones
 
 - **Cambio de eje**: Sistemas con ejes no paralelos (ej. diferenciales automotrices)
